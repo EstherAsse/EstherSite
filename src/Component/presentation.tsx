@@ -8,15 +8,23 @@ import {
   Heading,
   Text,
   Button,
-  Image,
   Icon,
   IconButton,
   createIcon,
   IconProps,
   useColorModeValue,
 } from '@chakra-ui/react'
+import React, { useRef } from 'react'
 
 export default function CallToActionWithVideo() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlayClick = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
   return (
     <Container maxW={'7xl'}>
       <Stack
@@ -42,17 +50,17 @@ export default function CallToActionWithVideo() {
                 bg: 'red.400',
                 zIndex: -1,
               }}>
-              Esther ASSEMIEN,
+              Qui,
             </Text>
             <br />
             <Text as={'span'} color={'red.400'}>
-              use everywhere!
+            Suis je ?
             </Text>
           </Heading>
           <Text color={'gray.500'}>
-            Snippy is a rich coding snippets app that lets you create your own code
-            snippets, categorize them, and even sync them in the cloud so you can use them
-            anywhere. All that is free!
+          Je m'appelle Esther ASSEMIEN. Etudiante en marketing digitale
+           Je prépare un diplôme en Techniques de Commercialisation (BUT). Ce cursus multidisciplinaire, me permet d’étudier des matières telles que le Marketing, la Communication, la Négociation-vente.
+ 
           </Text>
           <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
             <Button
@@ -63,16 +71,9 @@ export default function CallToActionWithVideo() {
               colorScheme={'red'}
               bg={'red.400'}
               _hover={{ bg: 'red.500' }}>
-              Get started
+              Me contacter
             </Button>
-            <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-              How It Works
-            </Button>
+            
           </Stack>
         </Stack>
         <Flex
@@ -90,14 +91,14 @@ export default function CallToActionWithVideo() {
             zIndex={-1}
             color={useColorModeValue('red.50', 'red.400')}
           />
-         <Box
+          <Box
             position={'relative'}
             height={'300px'}
             rounded={'2xl'}
             boxShadow={'2xl'}
             width={'full'}
             overflow={'hidden'}>
-            {/* <IconButton
+            <IconButton
               aria-label={'Play Button'}
               variant={'ghost'}
               _hover={{ bg: 'transparent' }}
@@ -108,9 +109,17 @@ export default function CallToActionWithVideo() {
               left={'50%'}
               top={'50%'}
               transform={'translateX(-50%) translateY(-50%)'}
-              onClick={onOpen}
-            /> */}
-            <iframe width="660" height="315" src="public/video/videoEsther.mp4" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              onClick={handlePlayClick}
+            />
+            <video
+              ref={videoRef}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              controls
+              poster="/image/estherImage.PNG" // Optional poster image
+            >
+              <source src="/video/videoEsther.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </Box>
         </Flex>
       </Stack>

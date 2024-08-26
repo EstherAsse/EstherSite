@@ -15,6 +15,8 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+
+  useColorMode
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
@@ -22,9 +24,11 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons'
+import { BsSun, BsMoonStarsFill } from 'react-icons/bs'
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
+  const { colorMode, toggleColorMode } = useColorMode()
 
   return (
     <Box>
@@ -54,12 +58,11 @@ export default function WithSubnavigation() {
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}>
-            Logo
+            Esther ASSEMIEN <br/>Etudiante
           </Text>
-
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+        </Flex>
+        <Flex display={{ base: 'none', md: 'flex' }} ml={10} justifyItems="center" >
             <DesktopNav />
-          </Flex>
         </Flex>
 
         <Stack
@@ -67,22 +70,13 @@ export default function WithSubnavigation() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
-            Sign In
-          </Button>
-          <Button
-            as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'pink.400'}
-            href={'#'}
-            _hover={{
-              bg: 'pink.300',
-            }}>
-            Sign Up
-          </Button>
+           <Button
+        aria-label="Toggle Color Mode"
+        onClick={toggleColorMode}
+        _focus={{ boxShadow: 'none' }}
+        w="fit-content">
+        {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
+      </Button>
         </Stack>
       </Flex>
 
@@ -148,9 +142,11 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       href={href}
       role={'group'}
       display={'block'}
+      justifyItems="center"
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
+      >
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
@@ -243,7 +239,7 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Inspiration',
+    label: 'Aceuil',
     children: [
       {
         label: 'Explore Design Work',
@@ -258,7 +254,7 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: 'Find Work',
+    label: 'Education',
     children: [
       {
         label: 'Job Board',
@@ -273,11 +269,23 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: 'Learn Design',
+    label: 'Compétences',
     href: '#',
   },
   {
-    label: 'Hire Designers',
+    label: 'Experience',
+    href: '#',
+  },
+  {
+    label: 'Projet',
+    href: '#',
+  },
+  {
+    label: 'Centre d&apos;intéret',
+    href: '#',
+  },
+  {
+    label: 'Contact',
     href: '#',
   },
 ]

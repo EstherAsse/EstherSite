@@ -5,6 +5,14 @@ import styles from "@/styles/Home.module.css";
 import WithSubnavigation from "@/Component/navbar";
 import CallToActionWithVideo from "@/Component/presentation";
 import SimpleAccordion from "@/Component/accordion";
+import ArticleList from "@/Component/education";
+import SimpleThreeColumns from "@/Component/parcours";
+import GridListWith from "@/Component/competences";
+import SmallWithLogoLeft from "@/Component/footer";
+import BlogPostGrid from "@/Component/projet";
+import ExperienceTimeline from "@/Component/experience";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +27,15 @@ export default function Home() {
       </Head>
       <main>
         <WithSubnavigation/>
-        <CallToActionWithVideo/>
+        <CallToActionWithVideo/> 
+        <SimpleThreeColumns/>
+        <ArticleList/>
         <SimpleAccordion/>
-      </main>
+        <ExperienceTimeline/>
+        <GridListWith/>
+        <BlogPostGrid/>
+        <SmallWithLogoLeft/>
+      </main> 
     </>
   );
 }
