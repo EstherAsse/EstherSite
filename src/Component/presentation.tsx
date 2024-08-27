@@ -63,6 +63,7 @@ export default function CallToActionWithVideo() {
  
           </Text>
           <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
+          <a href="#Contact">
             <Button
               rounded={'full'}
               size={'lg'}
@@ -73,6 +74,7 @@ export default function CallToActionWithVideo() {
               _hover={{ bg: 'red.500' }}>
               Me contacter
             </Button>
+            </a>
             
           </Stack>
         </Stack>
@@ -117,7 +119,7 @@ export default function CallToActionWithVideo() {
               controls
               poster="/image/estherImage.PNG" // Optional poster image
             >
-              <source src="/video/videoEsther.mp4" type="video/mp4" />
+              <source src="image/video/videoEsther.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </Box>

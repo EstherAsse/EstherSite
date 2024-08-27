@@ -15,8 +15,8 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
-
-  useColorMode
+  useColorMode,
+  Heading
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
@@ -29,6 +29,9 @@ import { BsSun, BsMoonStarsFill } from 'react-icons/bs'
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
+
+  // Display the "Étudiante en Marketing et com" line only on larger screens
+  const showSubtitle = useBreakpointValue({ base: false, md: true })
 
   return (
     <Box>
@@ -54,15 +57,33 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            Esther ASSEMIEN <br/>Etudiante
-          </Text>
+          <Heading
+            lineHeight={1.1}
+            fontWeight={600}
+            fontSize={{ base: '2xl', sm: '2xl', lg: '3xl' }}>
+            <Text
+              as={'span'}
+              position={'relative'}
+              _after={{
+                content: "''",
+                width: 'full',
+                height: '30%',
+                position: 'absolute',
+                bottom: 1,
+                left: 0,
+                bg: 'red.400',
+                zIndex: -1,
+              }}>
+              Esther ASSEMIEN
+            </Text>
+            <br />
+            <Text as={'span'} color={'red.400'} display={{ base: 'none', md: 'inline' }}>
+              Etudiante en Marketing et com
+            </Text>
+          </Heading>
         </Flex>
         <Flex display={{ base: 'none', md: 'flex' }} ml={10} justifyItems="center" >
-            <DesktopNav />
+          <DesktopNav />
         </Flex>
 
         <Stack
@@ -70,13 +91,13 @@ export default function WithSubnavigation() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-           <Button
-        aria-label="Toggle Color Mode"
-        onClick={toggleColorMode}
-        _focus={{ boxShadow: 'none' }}
-        w="fit-content">
-        {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
-      </Button>
+          <Button
+            aria-label="Toggle Color Mode"
+            onClick={toggleColorMode}
+            _focus={{ boxShadow: 'none' }}
+            w="fit-content">
+            {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
+          </Button>
         </Stack>
       </Flex>
 
@@ -239,53 +260,31 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Aceuil',
-    children: [
-      {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-    ],
+    label: 'Acceuil',
+    href: '#',
   },
   {
     label: 'Education',
-    children: [
-      {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-    ],
+    href: '#education',
   },
   {
     label: 'Compétences',
-    href: '#',
+    href: '#Compétences',
   },
   {
     label: 'Experience',
-    href: '#',
+    href: '#Experience',
   },
   {
     label: 'Projet',
-    href: '#',
+    href: '#Projet',
   },
   {
-    label: 'Centre d&apos;intéret',
-    href: '#',
+    label: "Centre d'intéret",
+    href: "#Centre d'intéret",
   },
   {
     label: 'Contact',
-    href: '#',
+    href: '#Contact',
   },
 ]

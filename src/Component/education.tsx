@@ -85,7 +85,7 @@ const ArticleList = () => {
         Ce cursus a confirmé ma préférence pour le Marketing Opérationnel ainsi que la communication.
         Pour ma deuxième année de BUT, je me suis spécialisée en marketing digital. 
         J'ai réaliser la troisiéme année en allternance dans laquelle j'occupe le poste de chef de projet éditorial web à la mairie de Cergy;
-        Je compte poursuivre mes étude en master 1 à l'ISCOM ( école supérieure de communication et publicité).
+        Je compte poursuivre mes étude en master 1 à l'INSEEC Paris  ( école supérieure de communication et publicité).
         </Text>
       </VStack>
     </Container>

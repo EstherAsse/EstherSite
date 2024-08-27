@@ -39,7 +39,7 @@ export default function SimpleThreeColumns() {
     <Box p={2}>
          <Container maxW={'7xl'} p="10"> 
              <Heading
-           
+              id="education"
               as={'span'}
               position={'relative'}
               _after={{

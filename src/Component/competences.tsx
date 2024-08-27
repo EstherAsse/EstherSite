@@ -67,6 +67,7 @@ export default function GridListWith() { // <- Changed component name here
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
         <Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'}
          as={'span'}
+         id='Compétences'
          position={'relative'}
          _after={{
            content: "''",

@@ -11,6 +11,8 @@ import GridListWith from "@/Component/competences";
 import SmallWithLogoLeft from "@/Component/footer";
 import BlogPostGrid from "@/Component/projet";
 import ExperienceTimeline from "@/Component/experience";
+import SocialProfileWithImageHorizontal from "@/Component/contact";
+
 
 
 
@@ -34,6 +36,7 @@ export default function Home() {
         <ExperienceTimeline/>
         <GridListWith/>
         <BlogPostGrid/>
+        <SocialProfileWithImageHorizontal/>
         <SmallWithLogoLeft/>
       </main> 
     </>
