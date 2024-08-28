@@ -173,7 +173,7 @@ export default function BlogPostGrid() {
             description="J'ai eu l'occasion de travailler en tant que cadreuse lors d'un séminaire..."
             images={[
               { src: "/image/video/projetvideo.mp4", width: 800, height: 800, isVideo: true },
-              { src: "/image/video/videoEsther.mp4", width: 800, height: 800, isVideo: true},
+              { src: "/image/video/projetvideo.mp4", width: 800, height: 800, isVideo: true},
              
             ]}
           />

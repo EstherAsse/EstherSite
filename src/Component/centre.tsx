@@ -62,7 +62,7 @@ function BlogPostWithImage({ title, description, images }: BlogPostProps) {
           fontWeight={800}
           fontSize={'sm'}
           letterSpacing={1.1}>
-          Projet
+          Interet
         </Text>
         <Heading
           color={useColorModeValue('gray.700', 'white')}

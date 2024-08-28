@@ -33,21 +33,21 @@ const courses: Course[] = [
     content1: "Élaborer le document un  modèle d'affaires",
     content2: "Développer une vision stratégique partagée",
     content3: "Analyser des documents et indicateurs financiers pertinents",
-    imgSrc: "/image/interet3.png",
+    imgSrc: "/image/business.jpeg",
   },
   {
     heading: "Compétence Marketing Digital",
     content1: "Sélectionner les outils pertinents pour recueillir, traiter et analyser les données ",
     content2: "Développer une stratégie marketing digital performante ",
     content3: "Piloter et évaluer une offre digitale ",
-    imgSrc: "/image/interet3.png",
+    imgSrc: "/image/marketing.jpeg",
   },
   {
     heading: "Compétence Communication Com",
     content1: "Élaborer une stratégie de communication cohérente avec le mix",
     content2: "Utiliser les outils de communication commerciale",
     content3: "Produire des supports de communication efficaces et qualitatifs",
-    imgSrc: "/image/interet3.png",
+    imgSrc: "/image/communication.jpeg",
   },
 ];
 
