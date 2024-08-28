@@ -7,11 +7,15 @@ import CallToActionWithVideo from "@/Component/presentation";
 import SimpleAccordion from "@/Component/accordion";
 import ArticleList from "@/Component/education";
 import SimpleThreeColumns from "@/Component/parcours";
-import GridListWith from "@/Component/competences";
 import SmallWithLogoLeft from "@/Component/footer";
 import BlogPostGrid from "@/Component/projet";
 import ExperienceTimeline from "@/Component/experience";
 import SocialProfileWithImageHorizontal from "@/Component/contact";
+import GridListWith from "@/Component/competences";
+import CompetTech from "@/Component/competTech";
+import CentreInteret from "@/Component/centre";
+import CoursesGrid from "@/Component/compGrid";
+
 
 
 
@@ -35,7 +39,10 @@ export default function Home() {
         <SimpleAccordion/>
         <ExperienceTimeline/>
         <GridListWith/>
+        <CompetTech/>
         <BlogPostGrid/>
+        <CoursesGrid/>
+        <CentreInteret/>
         <SocialProfileWithImageHorizontal/>
         <SmallWithLogoLeft/>
       </main> 

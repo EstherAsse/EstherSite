@@ -9,7 +9,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { ReactNode } from 'react'
 
 const Logo = (props: any) => {
@@ -71,18 +71,13 @@ export default function SmallWithLogoLeft() {
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
-        <Logo />
-        <Text>© 2022 Chakra Templates. All rights reserved</Text>
+        <Text>Esther ASSEMIEN.</Text>
+        <Text>© 2024 Esther ASSEMIEN. All rights reserved</Text>
         <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
-            <FaTwitter />
+          <SocialButton label={'Linked IN'} href={'https://www.linkedin.com/in/esther-assemien-4b42481a6/'}>
+            <FaLinkedin />
           </SocialButton>
-          <SocialButton label={'YouTube'} href={'#'}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton label={'Instagram'} href={'#'}>
-            <FaInstagram />
-          </SocialButton>
+         
         </Stack>
       </Container>
     </Box>

@@ -16,8 +16,14 @@ import {
   FcAbout,
   FcAssistant,
   FcCollaboration,
+  FcCursor,
+  FcDocument,
   FcDonate,
+  FcEditImage,
+  FcGoogle,
   FcManager,
+  FcPicture,
+  FcVideoProjector,
 } from 'react-icons/fc'
 
 interface CardProps {
@@ -54,14 +60,14 @@ const Card = ({ heading, description, icon, href }: CardProps) => {
           </Text>
         </Box>
         <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
-          Learn more
+          
         </Button>
       </Stack>
     </Box>
   )
 }
 
-export default function GridListWith() { // <- Changed component name here
+export default function GridListWith() { 
   return (
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
@@ -79,11 +85,11 @@ export default function GridListWith() { // <- Changed component name here
            bg: 'red.400',
            zIndex: -1,
          }}>
-          Mes Compétences
+        Compétences Informatiquues
         </Heading>
         <Text color={'gray.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis obcaecati ut
-          cupiditate pariatur, dignissimos, placeat amet officiis.
+            Lors de mon année scolaire, j'ai acquis plusieurs compétences, que ce soit des compétences techniques ou informatiques. 
+            Ces compétences m'ont permis de renforcer la compréhension théorique. Je suis prête à relever les défis dynamiques du monde professionnel.
         </Text>
       </Stack>
 
@@ -91,34 +97,41 @@ export default function GridListWith() { // <- Changed component name here
         <Flex flexWrap="wrap" gridGap={6} justify="center">
           <Card
             heading={'Photoshop'}
-            icon={<Icon as={FcAssistant} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            icon={<Icon as={FcPicture} w={10} h={10} />}
+            description={''}
             href={'#'}
           />
           <Card
             heading={'Goolgle ADS'}
-            icon={<Icon as={FcCollaboration} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            icon={<Icon as={FcGoogle} w={10} h={10} />}
+            description={''}
+            href={'#'}
+          />
+           <Card
+            heading={'Final Cut Pro'}
+            icon={<Icon as={FcCursor} w={10} h={10} />}
+            description={''}
+            href={'#'}
+          />
+           <Card
+            heading={'Power Bi'}
+            icon={<Icon as={FcVideoProjector} w={10} h={10} />}
+            description={''}
             href={'#'}
           />
           <Card
             heading={'Microsoft 360'}
-            icon={<Icon as={FcDonate} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            icon={<Icon as={FcDocument} w={10} h={10} />}
+            description={''}
             href={'#'}
           />
           <Card
             heading={'Python'}
-            icon={<Icon as={FcManager} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            icon={<Icon as={FcEditImage} w={10} h={10} />}
+            description={''}
             href={'#'}
           />
-          <Card
-            heading={'Photographie'}
-            icon={<Icon as={FcAbout} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
-            href={'#'}
-          />
+          
         </Flex>
       </Container>
     </Box>

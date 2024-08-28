@@ -71,7 +71,7 @@ const ArticleList = () => {
         <Heading as="h2">Ce qu'il faut savoir</Heading>
         <Text as="p" fontSize="lg">
           Pour commencer par la Genèse de mon parcours scolaire, j’ai obtenu mon Baccalauréat Général, 
-          avec pour spécialité Sciences Économique et Social ( SES), Histoire Géographie Géopolitique Sciences Politiques( HGGSP)
+          avec pour spécialité Sciences Économique et Social (SES), Histoire Géographie Géopolitique Sciences Politiques( HGGSP)
           À la sortie de ma Terminale, je me dirige vers un Bachelor universitaire technologique en techniques de commercialisation 
           à l’IUT de Creil, une branche de  L’université Picardie Jules Vernes.
         </Text>

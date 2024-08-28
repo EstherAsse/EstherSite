@@ -2,7 +2,7 @@
 
 import { ReactElement } from 'react'
 import { Box, SimpleGrid, Icon, Text, Stack, Flex, Heading, VStack, Container, Divider } from '@chakra-ui/react'
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc'
+import { FcAssistant, FcDonate, FcGraduationCap, FcIdea, FcInTransit, FcReading } from 'react-icons/fc'
 
 interface FeatureProps {
   title: string
@@ -59,7 +59,7 @@ export default function SimpleThreeColumns() {
             >     
                 <Feature
 
-                icon={<Icon as={FcAssistant} w={10} h={10} />}
+                icon={<Icon as={FcReading} w={10} h={10} />}
                 title={'Baccalauréat Général'}
                 text={
                     'Sciences économiques et sociales'
@@ -70,7 +70,7 @@ export default function SimpleThreeColumns() {
                 />
       
                 <Feature
-                icon={<Icon as={FcInTransit} w={10} h={10} />}
+                icon={<Icon as={FcGraduationCap} w={10} h={10} />}
                 title={'Bachelor universitaire de technologie'}
                 text={
                     'technologie en techniques de commercialisation, spécialité marketing digital'
@@ -81,7 +81,7 @@ export default function SimpleThreeColumns() {
                 />
 
               <Feature
-                icon={<Icon as={FcDonate} w={10} h={10} />}
+                icon={<Icon as={FcIdea} w={10} h={10} />}
                 title={'Master 1'}
                 text={
                     'Digitalisation, intelligence artificielle et big data'

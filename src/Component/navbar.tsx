@@ -281,7 +281,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Centre d'intéret",
-    href: "#Centre d'intéret",
+    href: "#centre",
   },
   {
     label: 'Contact',
