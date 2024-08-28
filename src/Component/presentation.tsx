@@ -63,7 +63,7 @@ export default function CallToActionWithVideo() {
  
           </Text>
           <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
-          <a href="#Contact">
+          <a href="#contact">
             <Button
               rounded={'full'}
               size={'lg'}
